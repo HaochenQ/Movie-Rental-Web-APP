@@ -27,17 +27,16 @@ class RegisterForm extends Form {
       auth.loginWithJwt(response.headers["x-auth-token"]);
       window.location = "/";
     } catch (ex) {
+      console.log(ex.response);
       if (ex.response && ex.response.status === 400) {
         const errors = { ...this.state.errors };
         errors.username = ex.response.data;
         this.setState({ errors });
-      } else {
-        window.location = "/";
       }
-      // if (ex.response && ex.response.status === 500) {
-      //   // auth.loginWithJwt(response.headers["x-auth-token"]);
-      //   // window.location = "/";
-      // }
+      if (ex.response && ex.response.status === 500) {
+        // auth.loginWithJwt(response.headers["x-auth-token"]);
+        window.location = "/login";
+      }
     }
   };
 
