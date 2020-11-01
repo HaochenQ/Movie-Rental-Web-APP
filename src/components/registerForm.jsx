@@ -35,7 +35,7 @@ class RegisterForm extends Form {
       }
       if (ex.response && ex.response.status === 500) {
         // auth.loginWithJwt(response.headers["x-auth-token"]);
-        //window.location = "/login";
+        window.location = "/login";
       }
     }
   };
