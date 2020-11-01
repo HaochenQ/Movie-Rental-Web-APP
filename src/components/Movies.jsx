@@ -98,7 +98,6 @@ class Movies extends Component {
 
   render() {
     const { user } = this.props;
-    const { length: count } = this.state.movies;
     const {
       genres,
       selectedGenre,
