@@ -23,6 +23,7 @@ class RegisterForm extends Form {
   doSubmit = async () => {
     try {
       const response = await userService.register(this.state.data);
+      console.log(response);
       auth.loginWithJwt(response.headers["x-auth-token"]);
       window.location = "/";
     } catch (ex) {
@@ -30,7 +31,13 @@ class RegisterForm extends Form {
         const errors = { ...this.state.errors };
         errors.username = ex.response.data;
         this.setState({ errors });
+      } else {
+        window.location = "/";
       }
+      // if (ex.response && ex.response.status === 500) {
+      //   // auth.loginWithJwt(response.headers["x-auth-token"]);
+      //   // window.location = "/";
+      // }
     }
   };
 
