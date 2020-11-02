@@ -19,5 +19,5 @@ As a logged in user, you can check and edit movies' name, number in stock, genre
 Admin users can delete movies in the table.
 
 ## A screenshot of Vidly APP
-<img src="https://github.com/HaochenQ/Vidly-Web-APP/blob/HaochenQ-patch-1/public/Vidly%20Screenshot.png" width="600">
+<img src="https://github.com/HaochenQ/Vidly-Web-APP/blob/master/public/Vidly%20Screenshot.png" width="600">
 
