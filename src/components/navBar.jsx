@@ -3,8 +3,8 @@ import { NavLink, Link } from "react-router-dom";
 
 const NavBar = ({ user }) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <Link className="navbar-brand " to="/">
         Vidly
       </Link>
       <button
@@ -29,6 +29,8 @@ const NavBar = ({ user }) => {
           <NavLink className="nav-link" to="/rentals">
             Rentals
           </NavLink>
+        </div>
+        <div className="navbar-nav ml-auto">
           {!user && (
             <React.Fragment>
               <NavLink className="nav-link" to="/login">
