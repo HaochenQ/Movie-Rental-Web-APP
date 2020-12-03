@@ -22,7 +22,11 @@ const ListGroup = (props) => {
       </li>
     );
   });
-  return <ul className="list-group">{genres}</ul>;
+  return (
+    <ul style={{ marginBottom: 10 }} className="list-group">
+      {genres}
+    </ul>
+  );
 };
 
 ListGroup.defaultProps = {
