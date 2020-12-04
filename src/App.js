@@ -12,8 +12,10 @@ import RegisterForm from "./components/registerForm";
 import ProtectedRouter from "./components/common/protectedRouter";
 import Logout from "./components/logout";
 import auth from "./services/authService";
+import Home from "./components/Home";
 import "./App.css";
 import "react-toastify/dist/ReactToastify.min.css";
+import Profile from "./components/Profile";
 
 class App extends Component {
   state = {};
@@ -37,10 +39,14 @@ class App extends Component {
             <Route path="/movies">
               {(props) => <Movies {...props} user={this.state.user} />}
             </Route>
+            <Route path="/profile">
+              {(props) => <Profile {...props} user={this.state.user} />}
+            </Route>
             <Route path="/customers" component={Customers} />
             <Route path="/rentals" component={Rentals} />
             <Route path="/not-found" component={NotFound} />
-            <Redirect exact from="/" to="/movies" />
+            <Route path="/" component={Home} />
+            {/* <Redirect exact from="/" to="/movies" /> */}
             <Redirect to="/not-found" />
           </Switch>
         </div>
