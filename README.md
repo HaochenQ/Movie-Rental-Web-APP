@@ -1,6 +1,6 @@
 # Backstage management system web App for Movie buff -  A Movie Rental Shop
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br />
-This APP is hosted on Heroku. Click here to check [Vidly](https://macabre-grave-59372.herokuapp.com/movies).<br />
+This APP is hosted on Heroku. Click here to check [movie buff](https://macabre-grave-59372.herokuapp.com/movies).<br />
 >Acknowledgement: *MongoBD*, *Bootstrap* and *Code with mosh*.
 
 
